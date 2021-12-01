@@ -17,14 +17,12 @@
 
 ## 接口描述
 ###1.上传文档
-![enter image description here](/tfl/pictures/202112/tapd_10099441_1638290544_91.png)
 上传文档接口，对上传文档进行处理，这里配置文件中对文件的大小做了限制。
 ```
 spring.servlet.multipart.max-file-size=200MB
 spring.servlet.multipart.max-request-size=200MB
 ```
 ###2.获取文档列表
-![enter image description here](/tfl/pictures/202112/tapd_10099441_1638290572_82.png)
 获取文档列表接口，获取指定目录下的所有的cos对象。接口较为简略，在前端做了分页效果。有需要可以进行参数控制分页等操作。
 ```
 #指定的目录位置
@@ -34,13 +32,11 @@ cos.file.dir=doc/
 
 
 ###3.获取预览url
-![enter image description here](/tfl/pictures/202112/tapd_10099441_1638290586_95.png)
 获取指定文件的预览url，例如
 ```
 https://markjrzhang-1251704708.cos.ap-chongqing.myqcloud.com/doc/文档预览.pptx?ci-process=doc-preview&dsttype=html&sign=xxx
 ```
 前端对于预览url的处理就更加简单，只需要iframe引入即可。 
-![enter image description here](/tfl/pictures/202112/tapd_10099441_1638291227_36.png)
 
 ## 参考资料
 [秒级接入、效果满分的文档预览方案——COS文档预览](https://mp.weixin.qq.com/s/plqLa0qBQlUAF1Ic2XqaZg) 
