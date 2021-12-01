@@ -16,13 +16,13 @@
 3.获取bucket的region信息以及填入BucketName。
 
 ## 接口描述
-###1.上传文档
+### 1.上传文档
 上传文档接口，对上传文档进行处理，这里配置文件中对文件的大小做了限制。
 ```
 spring.servlet.multipart.max-file-size=200MB
 spring.servlet.multipart.max-request-size=200MB
 ```
-###2.获取文档列表
+### 2.获取文档列表
 获取文档列表接口，获取指定目录下的所有的cos对象。接口较为简略，在前端做了分页效果。有需要可以进行参数控制分页等操作。
 ```
 #指定的目录位置
@@ -31,7 +31,7 @@ cos.file.dir=doc/
 这里获取了文档首页的图片以用作前端展示文档内容。（文档支持转为html或图片，这里转为图片生成文档首页内容图）
 
 
-###3.获取预览url
+### 3.获取预览url
 获取指定文件的预览url，例如
 ```
 https://markjrzhang-1251704708.cos.ap-chongqing.myqcloud.com/doc/文档预览.pptx?ci-process=doc-preview&dsttype=html&sign=xxx
