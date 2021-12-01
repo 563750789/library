@@ -9,21 +9,8 @@
 
 本项目实现了可交互的前端页面，用户可在主页选择上传本地文档或浏览文库中的现有文档（文档封面通过数据万象文档转码功能生成），点击打开后即调用数据万象文档HTML预览服务，实现文档的云端存储以及在线快速查看。
 
-实现效果：![enter image description here](/tfl/pictures/202112/tapd_10099441_1638352422_39.png)
-![enter image description here](/tfl/pictures/202112/tapd_10099441_1638352471_94.png)
-
-![enter image description here#300px](/tfl/pictures/202112/tapd_10099441_1638288403_74.png)
-文档类型：
-![enter image description here#300px](/tfl/pictures/202112/tapd_10099441_1638289033_33.png)
-表格类型：
-![enter image description here#300px](/tfl/pictures/202112/tapd_10099441_1638289134_72.png)
-演示类型：
-![enter image description here#300px](/tfl/pictures/202112/tapd_10099441_1638289256_35.png)
-PDF：
-![enter image description here#300px](/tfl/pictures/202112/tapd_10099441_1638289210_27.png)
-
 ## 配置内容获取指引
-![enter image description here](/tfl/pictures/202112/tapd_10099441_1638290483_65.png)
+
 1.注册腾讯云账号并获取秘钥得到sid，skey。
 2.开通对象存储（COS）服务，创建bucket，在bucket中开启文档处理功能。
 3.获取bucket的region信息以及填入BucketName。
