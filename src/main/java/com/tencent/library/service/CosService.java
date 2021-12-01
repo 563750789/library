@@ -17,10 +17,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,7 +82,8 @@ public class CosService {
                 if (cosVersionSummary.isLatest() && !cosVersionSummary.isDeleteMarker()) {
                     cosObject = new CosObject();
                     if (!StringUtils.isNullOrEmpty(cosVersionSummary.getKey())) {
-                        cosObject.setFileName(cosVersionSummary.getKey().substring(4));
+                        //获取文件名称, cos返回的是全路径名称 需要去掉目录前缀
+                        cosObject.setFileName(cosVersionSummary.getKey().substring(dir.length()));
                     }
                     cosObject.setSize(Long.toString(cosVersionSummary.getSize()));
                     cosObject.setLastModify(cosVersionSummary.getLastModified());
